@@ -16,41 +16,33 @@ knowledgebase = os.path.join(parent_path, "docs", "markdown", "knowledge")
 dbpath = os.path.join(parent_path, "knowledge_db")
 dbname = "knowledge.db"
 
-os.makedirs(dbpath, exist_ok=True)
 
-
-# Load environment variables from .env file
 load_dotenv(dotenv_path=os.path.expanduser('~/.env'))
 
-# Now you can access your OpenAI key
 openai_api_key = os.getenv("OPENAI_API_KEY")
-
 
 loader = DirectoryLoader(
     knowledgebase,
-    glob="**/*.md",      # Only load .md files recursively
-    show_progress=True,  # Optional: show progress while loading
-    loader_cls=TextLoader # Use TextLoader internally
+    glob="**/*.md", 
+    show_progress=True,
+    loader_cls=TextLoader
 )
 
 documents = loader.load()
 
 
-# Initialize splitter
 splitter = RecursiveCharacterTextSplitter(
-    chunk_size=500,      # Size of each chunk
-    chunk_overlap=50,    # How much chunks should overlap (helps in smooth reading)
+    chunk_size=500, 
+    chunk_overlap=50,
 )
 
-# Split the documents
 docs = splitter.split_documents(documents)
 
-# 1. Initialize the embedding function
 embedding_function = OpenAIEmbeddings(openai_api_key=openai_api_key)
 
-# Create FAISS vector database
-vectorstore = FAISS.from_documents(docs, embedding_function)
+os.makedirs(dbpath, exist_ok=True)
 
+vectorstore = FAISS.from_documents(docs, embedding_function)
 
 faiss.write_index(vectorstore.index, os.path.join(dbpath, dbname))
 
