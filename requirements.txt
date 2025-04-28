@@ -1,6 +1,4 @@
 langchain
-langchain-google-genai 
-google-generativeai
 faiss-cpu   
 openai 
 langchain-openai
