@@ -1,3 +1,4 @@
+import json
 from langchain.document_loaders import TextLoader 
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -12,9 +13,13 @@ from dotenv import load_dotenv
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 parent_path = os.path.dirname(dir_path)
-knowledgebase = os.path.join(parent_path, "docs", "markdown", "knowledge")
-dbpath = os.path.join(parent_path, "knowledge_db")
-dbname = "knowledge.db"
+config_path = os.path.join(parent_path, "config.json")
+with open(config_path, "r") as f:
+    config = json.load(f)
+
+knowledgebase = os.path.join(parent_path, config["paths"]["knowledge_base"])
+dbpath = os.path.join(parent_path, config["paths"]["database_path"])
+dbname = config["paths"]["database_name"]
 
 
 load_dotenv(dotenv_path=os.path.expanduser('~/.env'))
@@ -51,5 +56,3 @@ with open(os.path.join(dbpath, "docstore.pkl"), "wb") as f:
 
 with open(os.path.join(dbpath, "index_to_docstore_id.pkl"), "wb") as f:
     pickle.dump(vectorstore.index_to_docstore_id, f)
-
-print("done")
