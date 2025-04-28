@@ -1,0 +1,422 @@
+[
+  {
+    "class_name": "ActionDockerListContainers",
+    "action_name": "docker_list_containers",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDockerStartContainer",
+    "action_name": "docker_start_container",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDockerStopContainer",
+    "action_name": "docker_stop_container",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDockerRemoveContainer",
+    "action_name": "docker_remove_container",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDockerRestartContainer",
+    "action_name": "docker_restart_container",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDockerInspectContainer",
+    "action_name": "docker_inspect_container",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDockerRunContainer",
+    "action_name": "docker_run_container",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDockerSwarmStatus",
+    "action_name": "docker_swarm_status",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDockerListSwarmServices",
+    "action_name": "docker_list_swarm_services",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDockerListSwarmNodes",
+    "action_name": "docker_list_swarm_nodes",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDockerInspectSwarmService",
+    "action_name": "docker_inspect_swarm_service",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDockerRemoveSwarmService",
+    "action_name": "docker_remove_swarm_service",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionSimpleTelegramNotify",
+    "action_name": "simple_telegram_notify",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionSimpleHTTPNotify",
+    "action_name": "simple_http_notify",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionStartScriptExecution",
+    "action_name": "start_script_execution",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionStopScriptExecution",
+    "action_name": "stop_script_execution",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionRestartSelf",
+    "action_name": "restart_self",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionUpdate",
+    "action_name": "update_self",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionReadConfiguration",
+    "action_name": "get_configuration",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionWriteConfiguration",
+    "action_name": "set_configuration",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionReadModuleConfiguration",
+    "action_name": "get_module_configuration",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionWriteModuleConfiguration",
+    "action_name": "set_module_configuration",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionStartTarget",
+    "action_name": "start_target",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionStopTarget",
+    "action_name": "stop_target",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionRestartTarget",
+    "action_name": "restart_target",
+    "description": null,
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDownloadFile",
+    "action_name": "download_file",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDeleteFolder",
+    "action_name": "delete_folder",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDeleteFile",
+    "action_name": "delete_file",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionListPathContent",
+    "action_name": "list_content",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionGetAccessiblePaths",
+    "action_name": "get_accessible_paths",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionReadFile",
+    "action_name": "read_file",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionWriteFile",
+    "action_name": "write_file",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionUpdateAccessiblePaths",
+    "action_name": "update_accessible_paths",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionSample",
+    "action_name": "cloudisense_sample_only",
+    "description": "Module action demo.",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionSample",
+    "action_name": "sample_only",
+    "description": "Module action demo.",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionLogBackUp",
+    "action_name": "logmon_log_backup",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionListLogs",
+    "action_name": "list_logs",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionStartLogRecording",
+    "action_name": "start_log_recording",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionStopLogRecording",
+    "action_name": "stop_log_recording",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionWriteLogChunks",
+    "action_name": "write_log_chunks",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionListRules",
+    "action_name": "list_rules",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionReloadRules",
+    "action_name": "reload_rules",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionReloadRule",
+    "action_name": "reload_rule",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionWriteRule",
+    "action_name": "write_rule",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionDeleteRule",
+    "action_name": "delete_rule",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionReadRule",
+    "action_name": "read_rule",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionGenerateSampleRule",
+    "action_name": "generate_sample",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionCheckSystemCtlProcess",
+    "action_name": "check_process",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionGetSystemStats",
+    "action_name": "get_system_stats",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionGetMemoryStats",
+    "action_name": "get_memory_stats",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionGetCPUStats",
+    "action_name": "get_cpu_stats",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionGetSystemTime",
+    "action_name": "get_system_time",
+    "description": "Returns system time",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionGetSoftwareVersion",
+    "action_name": "get_software_version",
+    "description": "Return the version of cloudisense software",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionPublishChannel",
+    "action_name": "publish_channel",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionCreateChannel",
+    "action_name": "create_channel",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionRemoveChannel",
+    "action_name": "remove_channel",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionSubcribeChannel",
+    "action_name": "subscribe_channel",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionUnSubcribeChannel",
+    "action_name": "unsubscribe_channel",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionHttpGet",
+    "action_name": "http_get",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  },
+  {
+    "class_name": "ActionTest",
+    "action_name": "test",
+    "description": "Abstract method, must be defined in concrete implementation. action names must be unique",
+    "parameters": [],
+    "return_value": null
+  }  
+]
