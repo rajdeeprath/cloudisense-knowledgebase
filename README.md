@@ -7,7 +7,7 @@ All technical documentation related to cloudisense can be found here.
 
 ---
 
-## 📊 Overview
+## Overview
 
 This project implements a simple, production-ready **Retrieval-Augmented Generation (RAG)** system that:
 
@@ -23,7 +23,7 @@ The **vector database file generated here is distributed along with CloudiSENSE*
 
 ---
 
-## 💡 Technologies Used
+## Technologies Used
 
 - **FAISS** (Facebook AI Similarity Search)
 - **OpenAI API** (Embeddings + ChatCompletion)
@@ -34,7 +34,7 @@ The **vector database file generated here is distributed along with CloudiSENSE*
 
 ---
 
-## 📖 Workflow
+## Workflow
 
 1. **Load Documents**
    - Markdown files (`.md`) are loaded from a specified folder.
@@ -65,7 +65,7 @@ The **vector database file generated here is distributed along with CloudiSENSE*
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```plaintext
 knowledge/               # Folder containing Markdown files
@@ -80,7 +80,7 @@ rag/retrieve.py           # Script to load and retrieve data from the vector dat
 
 ---
 
-## 🔧 Installation
+## Installation
 
 ```bash
 pip install langchain faiss-cpu openai python-dotenv langchain-openai langchain-community
@@ -88,7 +88,7 @@ pip install langchain faiss-cpu openai python-dotenv langchain-openai langchain-
 
 ---
 
-## 🔗 Setting Up Environment Variables
+## Setting Up Environment Variables
 
 Create a `.env` file in your home directory on the development system:
 
@@ -101,14 +101,14 @@ OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxx
 
 ---
 
-## 💬 Preparing and Using the Vector Database
+## Preparing and Using the Vector Database
 
 1. **Run `rag/build.py`** to generate the vector database and accompanying files.
 2. **Run `rag/retrieve.py`** to load the database and execute a test search on it.
 
 ---
 
-## 💬 Querying and Generating Answers
+## Querying and Generating Answers
 
 ```python
 import openai
@@ -124,8 +124,6 @@ Context:
 {context}
 
 Question: {query}
-
-Answer:
 """
 
 response = openai.ChatCompletion.create(
@@ -143,20 +141,9 @@ print(final_answer)
 
 ---
 
-## 🔓 Key Best Practices
-
-- Always **use the same embedding model** during vector creation and query time.
-- Use **lower temperature** in OpenAI ChatCompletion for factual answers.
-- Set up **environment variables** securely for API keys.
-- **Save and organize** your FAISS files properly.
-- If large corpus, increase FAISS `k` search value to find more relevant documents.
-
----
-
 # 🚀 Conclusion
 
 This RAG system efficiently combines vector search (FAISS) and language generation (OpenAI) to build a powerful knowledge retrieval assistant.
-It can be easily extended to larger datasets, production APIs, or embedded inside applications!
 
 ---
 
