@@ -1,7 +1,8 @@
 {
-    "paths": {
-      "knowledge_base": "docs/markdown/knowledge",
-      "database_path": "knowledge_db",
-      "database_name": "knowledge.db"
-    }
+  "version": "0.0.12",
+  "paths": {
+    "knowledge_base": "docs/markdown/knowledge",
+    "database_path": "knowledge_db",
+    "database_name": "knowledge.db"
   }
+}
