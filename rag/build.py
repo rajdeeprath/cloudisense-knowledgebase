@@ -1,15 +1,40 @@
-import json
-from langchain.document_loaders import TextLoader 
-
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.document_loaders import DirectoryLoader
-
-import pickle
-import faiss
 import os
+import sys
+import json
+import pickle
+
+import faiss
 from dotenv import load_dotenv
+
+from langchain.document_loaders import TextLoader, DirectoryLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.vectorstores import FAISS
+from langchain_openai import OpenAIEmbeddings
+
+
+def load_openai_key():
+    dotenv_path = os.getenv("ENV_OPENAI_DOT_ENV_FILE")
+    if dotenv_path and os.path.isfile(dotenv_path):
+        load_dotenv(dotenv_path=dotenv_path)
+        api_key = os.getenv("OPENAI_API_KEY")
+        if api_key:
+            return api_key
+
+    api_key = os.getenv("ENV_OPENAI_API_KEY")
+    if api_key:
+        return api_key
+
+    default_env = os.path.expanduser("~/.env")
+    if os.path.isfile(default_env):
+        load_dotenv(dotenv_path=default_env)
+        api_key = os.getenv("OPENAI_API_KEY")
+        if api_key:
+            return api_key
+
+    print("Could not find OpenAI API key from any source.")
+    sys.exit(1)
+
+
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 parent_path = os.path.dirname(dir_path)
@@ -21,10 +46,7 @@ knowledgebase = os.path.join(parent_path, config["paths"]["knowledge_base"])
 dbpath = os.path.join(parent_path, config["paths"]["database_path"])
 dbname = config["paths"]["database_name"]
 
-
-load_dotenv(dotenv_path=os.path.expanduser('~/.env'))
-
-openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = load_openai_key()
 
 loader = DirectoryLoader(
     knowledgebase,
